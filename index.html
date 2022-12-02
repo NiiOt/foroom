@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BIBLE STUDIES | GRACELAND</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/lightgallery/dist/css/lightgallery.min.css" rel="stylesheet">
+        <link href="vendors/summernote/dist/summernote.css" rel="stylesheet">
+
+
+        <!-- CSS -->
+        <link href="css/app_1.min.css" rel="stylesheet">
+        <link href="css/app_2.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+<header id="header" class="clearfix" data-ma-theme="green">
+            <ul class="h-inner">
+                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </li>
+
+                <li class="hi-logo">
+                    <a href="#"><span class='hidden-xs'>The Haven Of </span> Wisdom</a>
+                </li>
+
+
+                <li class="pull-right">
+                    <ul class="hi-menu">
+
+                        <li data-ma-action="search-open">
+                            <a href="#"><i class="him-icon zmdi zmdi-search"></i></a>
+                        </li>
+
+            <!--             <li class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-email"></i>
+                                <i class="him-counts">.</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-sm pull-right">
+                                <div class="list-group">
+                                    <div class="lg-header">
+                                        Messages
+                                    </div>
+                                    <div class="lg-body">
+                                        <a class="list-group-item media" href="#">
+                                            <div class="pull-left">
+                                                <img class="lgi-img" src="img/demo/profile-pics/1.jpg" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="lgi-heading">David Belle</div>
+                                                <small class="lgi-text">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                            </div>
+                                        </a>
+
+
+                                       
+                                    </div>
+                                    <a class="view-more" href="#">View All</a>
+                                </div>
+                            </div>
+                        </li> -->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" href="#">
+                                <i class="him-icon zmdi zmdi-notifications"></i>
+                                <i class="him-counts">.</i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg pull-right">
+                                <div class="list-group him-notification">
+                                    <div class="lg-header">
+                                        Notification
+
+                                        <ul class="actions">
+                                            <li class="dropdown">
+                                                <a href="#" data-ma-action="clear-notification">
+                                                    <i class="zmdi zmdi-check-all"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                     <div class="lg-body xs-body c-overflow" id="notification" style="height:300px"><i class="zmdi zmdi-spinner"></i>
+                             
+                                    </div>
+                                    <!-- <a class="view-more" href="#">View Previous</a> -->
+                                </div>
+                            </div>
+                        </li>
+                                            
+                        <li class="ma-trigger" data-ma-action="sidebar-open" data-ma-target="#chat">
+                            <a href="#"><i class="him-icon zmdi zmdi-comment-alt-text"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Top Search Content -->
+            <div class="h-search-wrap">
+                <div class="hsw-inner">
+                    <i class="hsw-close zmdi zmdi-arrow-left" data-ma-action="search-close"></i>
+                    <input type="text">
+                </div>
+            </div>
+        </header>
+
+        <section id="main">
+            <aside id="sidebar" class="sidebar c-overflow">
+                <div class="s-profile">
+                    <a href="#" data-ma-action="profile-menu-toggle">
+                        <div class="sp-pic">
+                            <img src="img/demo/profile-pics/1.jpg" alt="">
+                        </div>
+
+                        <div class="sp-info">
+                            
+                        </div>
+                    </a>
+
+                
+                </div>
+                        <ul class="main-menu">
+                        <li>
+                            <a href="profile-about.html"><i class="zmdi zmdi-account"></i> View Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-input-antenna"></i> Privacy Settings</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="zmdi zmdi-settings"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="#" id="logout"><i class="zmdi zmdi-time-restore"></i> Logout</a>
+                        </li>
+                    </ul>
+           
+            </aside>
+
+            <aside id="chat" class="sidebar">
+
+                <div class="chat-search">
+                    <div class="fg-line">
+                        <input type="text" class="form-control" placeholder="Search People">
+                        <i class="zmdi zmdi-search"></i>
+                    </div>
+                </div>
+
+                <div class="lg-body c-overflow" id="chatlist">
+                    <div class='list-group'>
+                        <a class='list-group-item media' href='#'>
+                            <div class='pull-left p-relative'>
+                                <img class='lgi-img' src='img/demo/profile-pics/2.jpg' alt=''>
+                                <i class='chat-status-busy'></i>
+                            </div>
+                            <div class='media-body'>
+                                <div class='lgi-heading'>Jonathan Morris</div>
+                                <small class='lgi-text'>Available</small>
+                            </div>
+                        </a>
+
+                      </div>
+                </div>
+            </aside>
+
+        <!-- <section id="main" class="col-md-10 col-sm-12"> -->
+            <section id="content" class="col-md-8 col-sm-12" style="padding-top: 0px">
+                <div class="">
+                    <div class="row wall" >
+                        <div class="col-md-12">
+                            <div class="card w-post">
+                                <div class="card-body">
+                                    <textarea class="wp-text" rows="6" id="txtpost" placeholder="Write a new post..."></textarea>
+                                    <textarea class="wp-text auto-size" rows="1" id="txtpostlink" placeholder="Post link..."></textarea>
+                                    <div id="postImg">
+                                           <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                                              <center>  <div>
+                                                    <img src="img/notifications.png" id="previewing" alt="" class="img-responsive text-center" width="150px" height="150px">
+                                                    <input type="file" id="file" name="file"><span id="message"></span>
+                                                    <textarea class="wp-text auto-size" rows="1" id="caption" placeholder="Add Caption..."></textarea>
+                                                   
+                                                </div></center>
+
+                                    </div>
+
+                                    <div class="wp-actions clearfix">
+                                        <div class="wpa-media-list pull-left">
+                                            <a data-toggle="tab" href="#" id="btntext" class="c-green">
+                                                <i class="zmdi zmdi-comment-alt-text"></i>
+                                            </a>
+                                            <a href="#" id="btnimg" class="c-amber">
+                                                <i class="zmdi zmdi-image"></i>
+                                            </a>
+                                            <a href="#" id="btnlink" class="c-blue">
+                                                <i class="zmdi zmdi-link"></i>
+                                            </a>
+                                        </div>
+
+                                        <button class="btn btn-success btn-sm pull-right" id="btnpost">Post</button>
+                                         <button type="submit" class="btn btn-warning btn-sm pull-right" id="btnimgpost">Post</button>
+                                          <button class="btn btn-primary btn-sm pull-right" id="btnlinkpost">Post</button>
+                                    </div></form>
+                                </div>
+                            </div>
+                            <p id ="foroom"></p>
+                                   <center> <i class="zmdi zmdi-spinner zmdi-spin"></i> Content Loading...    </center>                     
+                    </div>
+                </div>
+                </div>
+                   
+
+                        <div class="modal fade" id="modalDefault" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog col-sm-12">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Comment</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><i class="zmdi zmdi-spinner zmdi-spinner text-center"></i>Comment Loading</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-link">Post</button>
+                                            <button type="button" class="btn btn-link" data-dismiss="modal">Close
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+            </section>
+
+        </section>
+
+<!--
+        <footer id="footer">
+            Copyright &copy; EduHub
+-->
+
+<!--
+            <ul class="f-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+-->
+<!--        </footer>-->
+
+
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/sscroll.js"></script>
+
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+        <script src="vendors/fileinput/fileinput.min.js"></script>
+
+        <script src="vendors/bower_components/lightgallery/lib/lightgallery-all.min.js"></script>
+        <script src="vendors/bower_components/autosize/dist/autosize.min.js"></script>
+         <script src="vendors/summernote/dist/summernote-updated.min.js"></script>
+
+        <script src="js/foroom.js" type="application/javascript"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="js/app.min.js"></script>
+        <script type="text/javascript">
+            $("#txtpostlink").hide();//Hides Link textarea
+             $("#postImg").hide(); //Hides image upload div
+             $("#btnimgpost").hide(); //Hides img upload div link
+             $("#btnlinkpost").hide(); //Hides link text
+
+            $("#btnlink").click(function(){
+                $("#txtpost").hide();
+                $("#postImg").hide();
+                $("#btnpost").hide();
+                $("#btnimgpost").hide();
+                $("#txtpostlink").show();
+                $("#btnlinkpost").show();
+            })
+
+
+
+              $("#btntext").click(function(){
+                $("#txtpost").show();
+                $("#postImg").hide();
+                $("#btnpost").show();
+                $("#btnimgpost").hide();
+                $("#txtpostlink").hide();
+                $("#btnlinkpost").hide();
+            })
+
+            $("#btnimg").click(function(){
+                $("#txtpost").hide();
+                $("#txtpostlink").hide();
+                $("#btnlinkpost").hide();
+                $("#btnpost").hide();
+                $("#postImg").show();
+                $("#btnimgpost").show();
+            })
+
+
+             $("#uploadimage").on('submit',(function(e) {
+                console.log($("#uploadimage"))
+                    e.preventDefault();
+                    // alert()
+                    $.ajax({
+                            url: "php/upload.php",        // Url to which the request is send
+                            type: "POST",             // Type of request to be send, called as method
+                            data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+                            contentType: false,       // The content type used when sending data to the server.
+                            cache: false,             // To unable request pages to be cached
+                            processData:false,        // To send DOMDocument or non processed data file it is set to false
+                            success: function(data)   // A function to be called if request succeeds
+                            {
+                                $('#loading').hide();
+                                 $('#previewing').attr('src','img/notifications.png');
+                                 $("#caption").val("");
+                                $("#file").val("");
+                                bodyReplace();
+
+                            }
+                    });
+            }));
+// })
+                    // Function to preview image after validation
+                    $(function() {
+                        $("#file").change(function() {
+                            $("#message").empty(); // To remove the previous error message
+                            var file = this.files[0];
+                            var imagefile = file.type;
+                            var match= ["image/jpeg","image/png","image/jpg"];
+                            if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2])))
+                            {
+                                $('#previewing').attr('src','img/notifications.png');
+                                $("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
+                                return false;
+                            }
+                            else
+                            {
+                                var reader = new FileReader();
+                                reader.onload = imageIsLoaded;
+                                reader.readAsDataURL(this.files[0]);
+                            }
+                        });
+                    });
+
+                    function imageIsLoaded(e) {
+                        $("#file").css("color","green");
+                        $('#image_preview').css("display", "block");
+                        $('#previewing').attr('src', e.target.result);
+                        $('#previewing').attr('width', '250px');
+                        $('#previewing').attr('height', '230px');
+                    };
+                    // });
+             // })
+
+
+            $.post("php/foroom.php",{status:"getSession"},function(data){
+                if(data.match("false")){
+                    window.location = "login.html";
+                }else{
+                    $(".sp-info").text(data)
+                }
+            })
+        </script>
+    </body>
+
+<!-- 0548602733 -->
+</html>
